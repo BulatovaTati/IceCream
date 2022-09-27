@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+  <title>IceCream</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <script type="module" src="./index.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/favicon_io/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- SmoothScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- ❗️❗️❗️ Add partials like so for every page -->
+
+  <!-- Kolesnik Alexey -->
+  <include src="./partials/hero-header.html"></include>
+
+  <!-- Golub Alexandr -->
+  <include src="./partials/products.html"></include>
+
+  <!-- Bulatova Tati -->
+  <include src="./partials/about.html"></include>
+
+  <!-- Mishugli Vitaliy -->
+  <include src="./partials/advantages.html"></include>
+
+  <!-- Kupreychuk Oleksiy -->
+  <include src="./partials/gallery.html"></include>
+
+  <!-- Pohorilets Yura -->
+  <include src="./partials/customer-reviews.html"></include>
+
+  <!-- Kyrylenko Tanya -->
+  <include src="./partials/contacts.html"></include>
+
+  <!-- Stepaniuk Andrii -->
+  <include src="./partials/footer.html"></include>
+
+
+
+
+
+  <!-- Number score -->
+  <script src="./js/numb.js"></script>
+
+  <!-- To top JS -->
+  <script src="./js/to-top.js"></script>
+
+  <!-- Flip card JS -->
+  <script src="./js/flip-card.js"></script>
+
+  <!-- Menu JS -->
+  <script src="./js/menu.js"></script>
+
+  <!-- SmoothScroll JS -->
+  <script src="./js/smooth.js"></script>
+
+  <!-- Shake JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Modal JS -->
+  <script src="./js/modal.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        clickable: true,
+      },
+      effect: 'flip',
+      flipEffect: {
+        slideShadows: false,
+      },
+    });
+  </script>
+</body>
+
+</html>
