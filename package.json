@@ -2,17 +2,17 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://YuriiPohorilets.github.io/icecream-project-01",
+  "homepage": "https://BulatovaTati.github.io/IceCream",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /icecream-project-01/"
+    "build": "parcel build src/*.html --public-url /IceCream/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/BulatovaTati/IceCream.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Bulatova Tatiana <kohodatat@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"

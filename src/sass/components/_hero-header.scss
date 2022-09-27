@@ -139,7 +139,7 @@
 
     overflow: hidden;
     background-color: transparent;
-    z-index: 999;
+    z-index: 997;
     cursor: pointer;
 
     &::after {
@@ -222,24 +222,35 @@
         visibility: visible;
         transform: translateY(0);
     }
+
+    @include bpoint(tablet) {
+        position: absolute;
+        top: 40%;
+        right: 6%;
+    }
 }
 
 // Header
 .header {
-    position: relative;
-    // padding: 10px 0;
-    background-color: getColor(background-hero);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 10px 0;
+    background-color: transparent;
+    z-index: 100;
 
     @include bpoint(tablet) {
-        // padding-top: 32px;
+        padding-top: 32px;
     }
 
     @include bpoint(desktop) {
-        // padding-top: 37px;
+        padding-top: 37px;
     }
 }
 
 .header__container {
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -254,7 +265,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 998;
+    z-index: 996;
 
     width: 100vw;
     height: 100vh;
@@ -268,6 +279,11 @@
     transition: transform getProperty(time) getProperty(cubic),
         opacity getProperty(time) getProperty(cubic),
         visibility getProperty(time) getProperty(cubic);
+
+
+    @include bpoint(tablet) {
+        width: 45vw;
+    }
 
     @include bpoint(desktop) {
         position: static;
@@ -302,6 +318,10 @@
     display: flex;
     align-items: center;
 
+    @include bpoint(tablet) {
+        margin-top: 90px;
+    }
+
     @include bpoint(desktop) {
         margin: 0;
         width: 159px;
@@ -318,10 +338,6 @@
 
 .nav__list {
     @extend %list;
-
-    @include bpoint(tablet) {
-        text-align: center;
-    }
 
     @include bpoint(desktop) {
         margin-right: 141px;
@@ -350,6 +366,9 @@
     @include bpoint(desktop) {
         margin-right: 35px;
         padding: 20px 0;
+        font-size: 16px;
+        line-height: 1.31;
+
         border: none;
 
         &:last-child {
@@ -361,6 +380,13 @@
 
 .nav__link {
     @extend %link;
+
+    transition: color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
 }
 
 .btn--nav {
@@ -383,30 +409,30 @@
 .hero {
     position: relative;
 
-    padding-top: 136px;
+    padding-top: 194px;
     padding-bottom: 158px;
-
+    height: 502px;
     background-color: getColor(background-hero);
     background-image: url('../images/hero-header/circle.png');
-    background-size: 344px 344px;
+    background-size: 344px;
     background-position: 36px 83px;
     background-repeat: no-repeat;
     overflow: hidden;
 
     @include bpoint(tablet) {
-        padding-top: 20px;
+        padding-top: 102px;
         padding-bottom: 20px;
-
+        height: 416px;
         background-size: 335px 335px;
-        background-position: 58% 10%;
+        background-position: 58% 43px;
     }
 
     @include bpoint(desktop) {
-        padding-top: 60px;
+        padding-top: 147px;
         padding-bottom: 60px;
-
+        height: 664px;
         background-size: 534px 534px;
-        background-position: 80% 0px;
+        background-position: 80% 54px;
     }
 }
 
@@ -452,14 +478,16 @@
         bottom: 0;
         right: 10%;
 
+
         width: 171px;
         height: 410px;
 
+       
 
         @include bpoint(tablet) {
             bottom: 0;
             right: 39.5%;
-
+  
             width: 143px;
             height: 336px;
         }
@@ -488,24 +516,27 @@
 }
 
 @keyframes girl {
-    
+
     0% {
         transform: translateX(110%);
-        
+
     }
+
     50% {
         transform: translateX(-10%);
-        
+
     }
+
     70% {
         transform: translateX(10%);
-        
+
     }
+
     100% {
         transform: translateX(0);
-        
+
     }
-    
+
 }
 
 .hero__title {
@@ -516,6 +547,14 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: getColor(primary);
+
+    @include bpoint(tablet) {
+        font-size: 22px;
+    }
+    @include bpoint(desktop) {
+        font-size: 38px;
+        line-height: 1.158;
+    }
 }
 
 .hero__subtitle {
@@ -525,7 +564,18 @@
     line-height: 0.965;
     text-transform: uppercase;
     color: getColor(accent);
+
+    @include bpoint(tablet) {
+        font-size: 34px;
+    }
+    @include bpoint(desktop) {
+        font-size: 58px;
+        line-height: 0.95;
+    }
+
 }
+
+    
 
 .hero__list {
     @extend %list;
@@ -661,25 +711,47 @@
 }
 
 .hero__more {
-    width: 114px;
-   
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.hero__more:hover .hero__text {
+    opacity: 1;
+
 }
 
 .hero__text {
-    
-    display: none;
+    transition: 2s getProperty(cubic);
+    width: 114px;
+    opacity: 0;
+    margin-left: 20px;
 
     font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
     color: getColor(primary);
 
+    @include bpoint(tablet) {
+        bottom: 20px;
+        position: absolute;
+        z-index: 1;
+    }
+
     @include bpoint(desktop) {
         display: block;
+        bottom: 20px;
+        position: absolute;
+        z-index: 1;
+
     }
 }
 
+
+
 .hero__btn {
+
     margin-top: 70px;
 
     display: flex;
@@ -687,12 +759,11 @@
     justify-content: center;
     width: 18px;
     height: 18px;
-
+   
     background-color: getColor(active-white);
     border-radius: 50%;
-    &:hover {
-        background-color: getColor(copy);
-    }
+
+  
 
     @include bpoint (desktop) {
         margin-top: 7px;
@@ -703,5 +774,5 @@
     width: 14px;
     height: 14px;
     fill: getColor(accent);
-    
+
 }
