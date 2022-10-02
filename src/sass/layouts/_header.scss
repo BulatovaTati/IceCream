@@ -1,0 +1,170 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 10px 0;
+    background-color: transparent;
+    z-index: 100;
+
+    @include bpoint(tablet) {
+        padding-top: 32px;
+    }
+
+    @include bpoint(desktop) {
+        padding-top: 37px;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    min-width: 199px;
+    height: 50px;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 996;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: getColor(background-menu);
+
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: transform getProperty(time) getProperty(cubic),
+        opacity getProperty(time) getProperty(cubic),
+        visibility getProperty(time) getProperty(cubic);
+
+
+    @include bpoint(tablet) {
+        width: 45vw;
+    }
+
+    @include bpoint(desktop) {
+        position: static;
+
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: transparent;
+
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0);
+
+    }
+}
+
+.btn--menu {
+    @include btn--light(209px, 44px);
+
+    margin-top: 60px;
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+
+    @include bpoint(tablet) {
+        margin-top: 90px;
+    }
+
+    @include bpoint(desktop) {
+        margin: 0;
+        width: 159px;
+        order: 1;
+    }
+}
+
+.btn__icon {
+    margin-left: 12px;
+    width: 9px;
+    height: 9px;
+    fill: currentColor;
+}
+
+.nav__list {
+    @extend %list;
+
+    @include bpoint(desktop) {
+        margin-right: 141px;
+        display: flex;
+    }
+}
+
+.nav__item {
+    padding: 12px 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.285;
+    color: getColor(active-white);
+
+    border-top: 1px solid getColor(line-menu);
+
+    &:last-child {
+        border-bottom: 1px solid getColor(line-menu);
+    }
+
+    &--active {
+        color: getColor(accent)
+    }
+
+    @include bpoint(desktop) {
+        margin-right: 35px;
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 1.31;
+
+        border: none;
+
+        &:last-child {
+            margin-right: 0;
+            border: none;
+        }
+    }
+}
+
+.nav__link {
+    @extend %link;
+
+    transition: color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+}
+
+.btn--nav {
+    display: none;
+
+    @include bpoint(tablet) {
+        @include btn--light(160px, 44px);
+
+        display: flex;
+        align-items: center;
+    }
+
+    @include bpoint(desktop) {
+        display: none;
+    }
+}

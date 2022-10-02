@@ -1,0 +1,333 @@
+.hero {
+    position: relative;
+
+    padding-top: 194px;
+    padding-bottom: 158px;
+    height: 502px;
+    background-color: getColor(background-hero);
+    background-image: url('../images/hero-header/circle.png');
+    background-size: 344px;
+    background-position: 36px 83px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @include bpoint(tablet) {
+        padding-top: 102px;
+        padding-bottom: 20px;
+        height: 416px;
+        background-size: 335px 335px;
+        background-position: 58% 43px;
+    }
+
+    @include bpoint(desktop) {
+        padding-top: 147px;
+        padding-bottom: 60px;
+        height: 664px;
+        background-size: 534px 534px;
+        background-position: 80% 54px;
+    }
+}
+
+.hero__container {
+    position: relative;
+    z-index: 3;
+
+    @include bpoint (tablet) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+}
+
+.hero__bg {
+    position: absolute;
+    z-index: 1;
+
+    &--girl {
+        display: none;
+
+        @include bpoint(tablet) {
+            bottom: 0;
+            right: 10%;
+
+            display: block;
+            width: 190px;
+            height: 150px;
+        }
+
+        @include bpoint(desktop) {
+            bottom: 0;
+            right: 1%;
+
+            width: 304px;
+            height: 241px;
+            animation: girl 5s ease-in-out;
+
+        }
+    }
+
+    &--icecream {
+        bottom: 0;
+        right: 10%;
+
+
+        width: 171px;
+        height: 410px;
+
+
+
+        @include bpoint(tablet) {
+            bottom: 0;
+            right: 39.5%;
+
+            width: 143px;
+            height: 336px;
+        }
+
+        @include bpoint(desktop) {
+            bottom: 0;
+            right: 20%;
+
+            width: 236px;
+            height: 557px;
+            animation: ice-cream 2s;
+        }
+    }
+}
+
+.hero__title {
+    font-family: getFont(accent);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: getColor(primary);
+
+    @include bpoint(tablet) {
+        font-size: 22px;
+    }
+
+    @include bpoint(desktop) {
+        font-size: 38px;
+        line-height: 1.158;
+    }
+}
+
+.hero__subtitle {
+    font-family: getFont(accent);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 0.965;
+    text-transform: uppercase;
+    color: getColor(accent);
+
+    @include bpoint(tablet) {
+        font-size: 34px;
+    }
+
+    @include bpoint(desktop) {
+        font-size: 58px;
+        line-height: 0.95;
+    }
+
+}
+
+
+
+.hero__list {
+    @extend %list;
+    margin-top: 20px;
+    display: flex;
+
+    @include bpoint(desktop) {
+        margin-top: 24px;
+    }
+}
+
+.hero__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.hero__link--dark {
+    @include btn--dark(63px, 24px);
+
+    @include bpoint(desktop) {
+        width: 107px;
+        height: 40px;
+    }
+}
+
+.hero__link--light {
+    @include btn--light(83px, 24px);
+
+    @include bpoint(desktop) {
+        width: 138px;
+        height: 40px;
+    }
+}
+
+.hero__link {
+    @extend %link;
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+
+    @include bpoint(desktop) {
+        font-size: 14px;
+        line-height: 1.286;
+    }
+}
+
+.hero__scroe {
+    display: none;
+
+    @include bpoint(tablet) {
+        margin-right: 10px;
+        display: block;
+    }
+}
+
+.score__list {
+    @extend %list;
+    width: 50px;
+}
+
+.score__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    color: getColor(active-white);
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: -12%;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: getColor(active-white);
+        border-radius: 50%;
+
+        @include bpoint(desktop) {
+            top: -5%;
+            right: -25%;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @include bpoint(desktop) {
+        font-size: 14px;
+        line-height: 1.286;
+    }
+}
+
+.score__number {
+    z-index: 10;
+
+    font-family: getFont(accent);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: getColor(accent);
+
+    @include bpoint(desktop) {
+        font-size: 46px;
+        line-height: 1.15;
+    }
+}
+
+.hero__description {
+    display: none;
+
+    @include bpoint(tablet) {
+        margin-top: 20px;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+.hero__more {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.hero__more:hover .hero__text {
+    opacity: 1;
+
+}
+
+.hero__text {
+    transition: 2s getProperty(cubic);
+    width: 114px;
+    opacity: 0;
+    margin-left: 20px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    color: getColor(primary);
+
+    @include bpoint(tablet) {
+        bottom: 20px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    @include bpoint(desktop) {
+        display: block;
+        bottom: 20px;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+
+.hero__btn {
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+
+    background-color: getColor(active-white);
+    border-radius: 50%;
+
+
+
+    @include bpoint (desktop) {
+        margin-top: 7px;
+    }
+}
+
+.hero__icon {
+    width: 14px;
+    height: 14px;
+    fill: getColor(accent);
+
+}

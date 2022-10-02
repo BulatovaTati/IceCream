@@ -1,0 +1,45 @@
+@keyframes slide-top {
+    from {
+        transform: translateY(-5px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes ice-cream {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes girl {
+
+    0% {
+        transform: translateX(110%);
+
+    }
+
+    50% {
+        transform: translateX(-10%);
+
+    }
+
+    70% {
+        transform: translateX(10%);
+
+    }
+
+    100% {
+        transform: translateX(0);
+
+    }
+
+}

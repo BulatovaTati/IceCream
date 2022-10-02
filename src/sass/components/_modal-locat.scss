@@ -1,0 +1,61 @@
+// Modal Location
+
+.contacts-location__modal {
+    position: fixed;
+    background-color: getColor(active-accent);
+    width: 90%;
+    height: 500px;
+
+    @include bpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.contacts-location__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: getColor(active-accent);
+    border: 2px solid getColor(accent);
+    border-radius: 50%;
+    outline: transparent;
+    cursor: pointer;
+    transition: background-color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        background-color: getColor(primary);
+    }
+}
+
+.contacts-location__title {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    justify-content: center;
+
+    font-family: getFont(accent);
+    line-height: 30px;
+    font-size: 18px;
+    color: getColor(accent);
+}
+
+.frame {
+    width: 90%;
+    height: 85%;
+
+    @include bpoint(tablet) {
+        width: 100%;
+        height: 100%;
+    }
+}

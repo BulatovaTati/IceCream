@@ -1,0 +1,274 @@
+// Modal Franchise
+
+.contacts-modal {
+    position: fixed;
+    background-color: getColor(active-accent);
+    width: 90vw;
+    max-width: 440px;
+
+    @include bpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+    }
+
+}
+
+.contacts-franchise__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: getColor(active-accent);
+    border: 2px solid getColor(accent);
+    border-radius: 50%;
+    outline: transparent;
+    cursor: pointer;
+    transition: background-color getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        background-color: getColor(primary);
+    }
+}
+
+.contacts-modal__icon {
+    fill: getColor(accent);
+}
+
+.contacts-modal__title {
+    display: none;
+
+    @include bpoint(tablet) {
+        display: block;
+        margin-bottom: 10px;
+        justify-content: center;
+
+        font-family: getFont(accent);
+        line-height: 30px;
+        font-size: 18px;
+        color: getColor(accent);
+    }
+}
+
+.contacts-modal__list {
+    display: none;
+    @extend %list;
+
+    @include bpoint(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+.contacts-modal__item {
+    margin-left: 20px;
+    box-sizing: border-box;
+    transform: scale(1.1);
+    transition: transform getProperty(time) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.3);
+    }
+
+    @include bpoint(tablet) {
+        width: calc(100% / 5 - 20px);
+        margin-bottom: 10px;
+
+        .contacts-modal__item:nth-last-child(n + 6) {
+            margin-bottom: 0;
+        }
+
+        .contacts-modal__item:nth-last-child(5n + 5) {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+.franchise-form__title {
+    margin-bottom: 30px;
+    padding-top: 40px;
+    justify-content: center;
+
+    font-family: getFont(accent);
+    line-height: 30px;
+    font-size: 18px;
+    color: getColor(accent);
+
+    @include bpoint(tablet) {
+        margin-bottom: 5px;
+        padding-top: 10px;
+    }
+}
+
+.franchise-form {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: block;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        @include bpoint(tablet) {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    &__name {
+        display: block;
+        text-align: left;
+        color: getColor(accent);
+
+        margin-bottom: 5px;
+    }
+
+    &__container {
+        position: relative;
+        display: block;
+
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 12px 12px 12px 42px;
+
+        color: getColor(accent);
+        background-color: getColor(active-accent);
+        border: 2px solid getColor(accent);
+        border-radius: 4px;
+        cursor: pointer;
+        outline: transparent;
+
+        transition: border getProperty(time) getProperty(cubic);
+
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        color: getColor(primary);
+        fill: currentColor;
+        transition: fill getProperty(time) getProperty(cubic);
+
+    }
+}
+
+
+.franchise-form__label:hover .franchise-form__input,
+.franchise-form__label:focus-within .franchise-form__input {
+    border: 2px solid getColor(btn-hover-dark);
+}
+
+.franchise-form__label:hover .franchise-form__icon,
+.franchise-form__label:focus-within .franchise-form__icon {
+    fill: getColor(accent);
+}
+
+
+.checkbox-franchise {
+    position: relative;
+    display: flex;
+
+    font-size: 12px;
+    line-height: 22px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    margin-bottom: 30px;
+
+    @include bpoint(tablet) {
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        position: absolute;
+    }
+
+}
+
+
+.checkbox-franchise__icon {
+    fill: getColor(active-accent);
+    margin-right: 8px;
+
+    background-color: getColor(active-accent);
+    border: 2px solid getColor(accent);
+    border-radius: 4px;
+
+    transition: border getProperty(time) getProperty(cubic), fill getProperty(time) getProperty(cubic), background-color getProperty(time) getProperty(cubic);
+
+    .checkbox-franchise__input:checked+& {
+        background-color: getColor(primary);
+        fill: getColor(secondary);
+        background-size: contain;
+        background-origin: border-box;
+    }
+
+    .checkbox-franchice__input:hover~&,
+    .checkbox-franchice__input:focus-within~& {
+        border: 2px solid getColor(btn-hover-dark);
+    }
+
+}
+
+.checkbox-franchise__label {
+    color: getColor(accent);
+}
+
+.franchise-btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 160px;
+    height: 44px;
+
+    font-family: getFont(accent);
+    font-weight: 700;
+    font-size: 18px;
+    @include lh (30px, 18px);
+    color: getColor(accent);
+
+    background-color: getColor(active-accent);
+    border: 2px solid getColor(accent);
+    border-radius: 22px;
+    outline: transparent;
+
+    transition: color getProperty(time) getProperty(cubic),
+        background-color getProperty(time) getProperty(cubic),
+        box-shadow getProperty(time) getProperty(cubic);
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: getColor(primary);
+        background-color: getColor(btn-hover-dark);
+        box-shadow: getShadow(btn);
+
+    }
+}

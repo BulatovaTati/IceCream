@@ -1,14 +1,25 @@
 @import './utils/mixins';
 @import './utils/variables';
+@import './utils/placeholders';
 
 @import './base/global';
-@import './base/modal';
 
-@import './components/hero-header';
-@import './components/products';
-@import './components/about';
-@import './components/advantages';
-@import './components/gallery';
-@import './components/customer-reviews';
-@import './components/contacts';
-@import './components/footer';
+
+@import './components/modal';
+@import './components/animations';
+@import './components/modal-franch';
+@import './components/modal-locat';
+@import './components/scroll';
+@import './components/menu';
+@import './components/modal-header';
+
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/products';
+@import './layouts/about';
+@import './layouts/advantages';
+@import './layouts/gallery';
+@import './layouts/customer-reviews';
+@import './layouts/contacts';
+@import './layouts/footer';

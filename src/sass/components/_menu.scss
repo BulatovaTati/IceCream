@@ -1,0 +1,101 @@
+.burger {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 997;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 8px;
+
+        width: 24px;
+        height: 2px;
+        background-color: getColor(accent);
+
+        border-radius: 4px;
+
+        transition: transform getProperty(time) getProperty(cubic),
+            background-color getProperty(time) getProperty(cubic);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 12px;
+        left: 8px;
+
+        width: 24px;
+        height: 2px;
+        background-color: getColor(accent);
+
+        border-radius: 4px;
+
+        transition: transform getProperty(time) getProperty(cubic),
+            background-color getProperty(time) getProperty(cubic);
+    }
+
+    @include bpoint(tablet) {
+        margin-left: auto;
+        margin-right: 32px;
+    }
+
+    @include bpoint(desktop) {
+        display: none;
+    }
+}
+
+.burger__icon {
+    position: absolute;
+    top: 19px;
+    left: 8px;
+
+
+    width: 24px;
+    height: 2px;
+    background-color: getColor(accent);
+
+    border-radius: 4px;
+
+    transition: transform getProperty(time) getProperty(cubic),
+        background-color getProperty(time) getProperty(cubic);
+}
+
+.burger.is-open {
+
+    & .burger__icon {
+        background-color: getColor(active-white);
+        transform: translateX(150%);
+    }
+
+    &::after {
+        background-color: getColor(active-white);
+        transform: translateY(7px) rotate(-45deg);
+    }
+
+    &::before {
+        background-color: getColor(active-white);
+        transform: translateY(-7px) rotate(45deg);
+    }
+
+    &~.nav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    @include bpoint(tablet) {
+        position: absolute;
+        top: 40%;
+        right: 6%;
+    }
+}
