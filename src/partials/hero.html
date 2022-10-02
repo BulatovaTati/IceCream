@@ -1,0 +1,93 @@
+<section class="hero">
+    <picture class="hero__bg hero__bg--icecream">
+        <source media="(min-width: 1280px)" srcset="
+                        ./images/hero-header/icecream.png    1x,
+                        ./images/hero-header/icecream@2x.png 2x,
+                        ./images/hero-header/icecream@3x.png 3x
+                        " />
+        <source media="(min-width: 768px)" srcset="
+                        ./images/hero-header/icecream_tablet.png    1x,
+                        ./images/hero-header/icecream_tablet@2x.png 2x,
+                        ./images/hero-header/icecream_tablet@3x.png 3x
+                        " />
+        <source media="(min-width: 320px)" srcset="
+                        ./images/hero-header/icecream_mobile.png    1x,
+                        ./images/hero-header/icecream_mobile@2x.png 2x,
+                        ./images/hero-header/icecream_mobile@3x.png 3x
+                        " />
+        <img src="./images/hero-header/icecream_mobile.png" alt="Multicolor ice-cream" width="236" height="557" />
+    </picture>
+
+    <picture class="hero__bg hero__bg--girl">
+        <source media="(min-width: 1280px)" srcset="
+                        ./images/hero-header/girl.png    1x,
+                        ./images/hero-header/girl@2x.png 2x,
+                        ./images/hero-header/girl@3x.png 3x
+                        " />
+        <source media="(min-width: 768px)" srcset="
+                        ./images/hero-header/girl_tablet.png    1x,
+                        ./images/hero-header/girl_tablet@2x.png 2x,
+                        ./images/hero-header/girl_tablet@3x.png 3x
+                        " />
+        <img src="./images/hero-header/girl_tablet.png" alt="Girl eats ice-cream" width="304" height="241" />
+    </picture>
+
+    <div class="hero__container container">
+        <div class="hero__box">
+            <h1 class="hero__title">Ice cream </br>made with </br>
+                <span class="hero__subtitle">passion</span>
+            </h1>
+
+            <ul class="hero__list">
+                <li class="hero__item">
+                    <a class="hero__link hero__link--dark" href="#products">Products</a>
+                </li>
+                <li class="hero__item">
+                    <a class="hero__link hero__link--light" href="#about">How it's made?</a>
+                </li>
+            </ul>
+
+            <div class="hero__description">
+                <picture>
+
+                    <source media="(min-width: 1280px)" srcset="
+                                    ./images/hero-header/milk.png    1x,
+                                    ./images/hero-header/milk@2x.png 2x,
+                                    ./images/hero-header/milk@3x.png 3x
+                                  " />
+                    <source media="(min-width: 768px)" srcset="
+                                    ./images/hero-header/milk_tablet.png    1x,
+                                    ./images/hero-header/milk_tablet@2x.png 2x,
+                                    ./images/hero-header/milk_tablet@3x.png 3x
+                                  " />
+                    <img class="hero__img" src="./images/hero-header/milk.png" alt="Jug of milk" />
+                </picture>
+                <div class="hero__more">
+                    <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor
+                        incididunt ut labore
+                        et
+                    </p>
+                    <a href="#" class="hero__btn">
+
+                        <svg class="hero__icon">
+                            <use href="./images/icon-sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero__scroe scroe">
+            <ul class="score__list">
+                <li class="score__item">
+                    <span class="score__number">16</span>cafes
+                </li>
+                <li class="score__item">
+                    <span class="score__number">23</span>food trucks
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

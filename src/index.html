@@ -7,28 +7,23 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"
     />
     <title>IceCream</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
 
     <link
       rel="icon"
       type="image/x-icon"
       href="./images/favicon_io/favicon.ico"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <include src="./partials/hero-header.html"></include>
+    <include src="./partials/header.html"></include>
+    <include src="./partials/hero.html"></include>
     <include src="./partials/products.html"></include>
 
     <include src="./partials/about.html"></include>
@@ -39,29 +34,8 @@
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
 
-    <!-- Shake JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        loop: true,
-        centeredSlides: true,
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true,
-          clickable: true,
-        },
-        effect: 'flip',
-        flipEffect: {
-          slideShadows: false,
-        },
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>
