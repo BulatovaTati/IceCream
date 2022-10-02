@@ -5,3 +5,4 @@ import './js/numb';
 import './js/smooth';
 import './js/to-top';
 import './js/swiper';
+import './js/form';
