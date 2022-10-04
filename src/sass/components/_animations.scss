@@ -43,3 +43,19 @@
     }
 
 }
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+
+    100% {
+        background-size: 600% 600%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 5px 0 getColor(active-accent);
+    }
+}

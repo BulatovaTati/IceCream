@@ -10,19 +10,21 @@
     }
 }
 
-.advantage {
+.advantage__item {
     padding-top: 60px;
     list-style: none;
-}
 
-.advantage:not(:last-child) {
-    margin-bottom: 32px;
+    &:not(:last-child) {
+        margin-bottom: 32px;
 
-    @include bpoint(tablet) {
-        margin-bottom: 0;
-        margin-right: 4px;
+        @include bpoint(tablet) {
+            margin-bottom: 0;
+            margin-right: 4px;
+        }
     }
 }
+
+
 
 .advantage__title {
     position: relative;
@@ -32,6 +34,7 @@
     font-size: 36px;
     line-height: 1.14;
     letter-spacing: 0.04em;
+
     text-transform: uppercase;
     text-align: left;
 
@@ -52,27 +55,30 @@
     }
 }
 
-.t_1::before {
+.t_1::before,
+.t_2::before,
+.t_3::before {
     content: '';
     position: absolute;
     top: -60px;
     left: 0;
     width: 50px;
     height: 50px;
-    background-image: url('../images/advantages/milk.svg');
+
     background-repeat: no-repeat;
 
 }
 
+.t_1::before {
+    background-image: url('../images/advantages/milk.svg');
+}
+
 .t_2::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 50px;
-    height: 50px;
     background-image: url('../images/advantages/fruits.svg');
-    background-repeat: no-repeat;
+}
+
+.t_3::before {
+    background-image: url('../images/advantages/heart.svg');
 }
 
 .t_2::after {
@@ -83,30 +89,15 @@
 
     @include bpoint(tablet) {
         left: 60px;
-
     }
 
     @include bpoint(desktop) {
         left: 70px;
-
     }
 }
 
-.t_3::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background-image: url('../images/advantages/heart.svg');
-    background-repeat: no-repeat;
-}
-
-
 
 .advantage__descr {
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 2.0;

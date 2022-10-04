@@ -1,9 +1,6 @@
 .products {
 	background-color: getColor(active-white);
-
-	@media screen and (max-width:320px) {
-		display: none;
-	}
+	display: none;
 
 	@include bpoint(mobile) {
 		display: block;
@@ -12,10 +9,6 @@
 
 .products__container {
 	width: 100%;
-
-	@include bpoint(mobile) {
-		min-width: 320px;
-	}
 
 	@include bpoint(tablet) {
 		max-width: 768px;
@@ -65,27 +58,9 @@
 
 	animation: reveal 3000ms ease-in-out forwards 200ms,
 		glow 3500ms linear infinite 4000ms;
-
-	@keyframes reveal {
-		80% {
-			letter-spacing: 8px;
-		}
-
-		100% {
-			background-size: 600% 600%;
-		}
-	}
-
-	@keyframes glow {
-		40% {
-			text-shadow: 0 5px 0 getColor(active-accent);
-		}
-	}
 }
 
 .products__list {
-	// text-align: center;
-
 	@extend %list;
 
 	@include bpoint(tablet) {
@@ -94,8 +69,6 @@
 		justify-content: center;
 	}
 }
-
-
 
 .products-card {
 	perspective: 600px;
@@ -182,7 +155,6 @@
 	}
 }
 
-
 .card.is-flipped {
 	transform: translateX(-100%) rotateY(-180deg);
 }
@@ -265,7 +237,6 @@
 	}
 }
 
-
 .products-card__title {
 	font-family: getFont(accent);
 	font-weight: 400;
@@ -310,7 +281,6 @@
 
 
 .products-card__description {
-
 	font-family: getFont(basic);
 	font-weight: 700;
 	font-size: 14px;
@@ -330,12 +300,10 @@
 }
 
 .card--ice-cream {
-
 	&::before {
 		background-image: url(../images/products/320/ice-cream_mob@1x.png);
 		background-size: contain;
 		background-repeat: no-repeat;
-
 
 		@include bpoint(mobile) {
 
@@ -359,7 +327,6 @@
 		}
 
 		@include bpoint(tablet) {
-
 			background-image: url(../images/products/768/ice-cream_tablet@1x.png);
 
 			@media (min-device-pixel-ratio: 2),
@@ -380,7 +347,6 @@
 		}
 
 		@include bpoint(desktop) {
-
 			background-image: url(../images/products/1280/ice-cream_desc@1x.png);
 
 			@media (min-device-pixel-ratio: 2),
@@ -403,7 +369,6 @@
 }
 
 .card--ice-coffee {
-
 	&::before {
 		background-image: url(../images/products/320/ice-coffe_mob@1x.png);
 		background-size: contain;
@@ -472,7 +437,6 @@
 }
 
 .card--milk-shake {
-
 	&::before {
 		background-image: url(../images/products/320/milkshakes_mob@1x.png);
 		background-size: contain;

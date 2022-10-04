@@ -9,7 +9,7 @@
     @include bpoint(tablet) {
         display: flex;
         flex-direction: column;
-        max-width: 700px;
+        max-width: 550px;
     }
 
 }
@@ -96,8 +96,6 @@
     }
 }
 
-
-
 .franchise-form__title {
     margin-bottom: 30px;
     padding-top: 40px;
@@ -117,63 +115,61 @@
 .franchise-form {
     display: flex;
     flex-direction: column;
+}
 
-    &__label {
-        display: block;
-        flex-direction: column;
-        margin-bottom: 10px;
+.franchise-form__label {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 10px;
 
-        @include bpoint(tablet) {
-            margin-bottom: 5px;
-        }
-
-    }
-
-    &__name {
-        display: block;
-        text-align: left;
-        color: getColor(accent);
-
+    @include bpoint(tablet) {
         margin-bottom: 5px;
     }
 
-    &__container {
-        position: relative;
-        display: block;
-
-    }
-
-    &__input {
-        display: block;
-        width: 100%;
-        height: 40px;
-        padding: 12px 12px 12px 42px;
-
-        color: getColor(accent);
-        background-color: getColor(active-accent);
-        border: 2px solid getColor(accent);
-        border-radius: 4px;
-        cursor: pointer;
-        outline: transparent;
-
-        transition: border getProperty(time) getProperty(cubic);
-
-    }
-
-    &__icon {
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        cursor: pointer;
-        transform: translateY(-50%);
-
-        color: getColor(primary);
-        fill: currentColor;
-        transition: fill getProperty(time) getProperty(cubic);
-
-    }
 }
 
+.franchise-form__name {
+    display: block;
+    text-align: left;
+    color: getColor(accent);
+    margin-bottom: 5px;
+}
+
+.franchise-form__container {
+    position: relative;
+    display: block;
+
+}
+
+.franchise-form__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 12px 12px 12px 42px;
+
+    color: getColor(accent);
+    background-color: getColor(active-accent);
+    border: 2px solid getColor(accent);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+
+    transition: border getProperty(time) getProperty(cubic);
+
+}
+
+.franchise-form__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    color: getColor(primary);
+    fill: currentColor;
+    transition: fill getProperty(time) getProperty(cubic);
+
+}
 
 .franchise-form__label:hover .franchise-form__input,
 .franchise-form__label:focus-within .franchise-form__input {
@@ -184,7 +180,6 @@
 .franchise-form__label:focus-within .franchise-form__icon {
     fill: getColor(accent);
 }
-
 
 .checkbox-franchise {
     position: relative;
@@ -230,7 +225,6 @@
     .checkbox-franchice__input:focus-within~& {
         border: 2px solid getColor(btn-hover-dark);
     }
-
 }
 
 .checkbox-franchise__label {
